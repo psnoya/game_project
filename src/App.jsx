@@ -15,7 +15,7 @@ class App extends React.Component {
     <Icon name='game' />
     Rock, Paper, Scissors!
     <Header.Subheader>
-      Manage your account settings and set e-mail preferences.
+      Let's Play!
     </Header.Subheader>
   </Header>
       
