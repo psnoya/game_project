@@ -6,17 +6,23 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "css-loader": "^5.0.1",
     "react": "^17.0.1",
+    "react-color": "^2.19.3",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.0",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^2.0.1",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "PORT=3001 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "cy:open": "cypress open & yarn start --silent"
+    "start:silent": "PORT=3001 BROWSER=none react-scripts start",
+    "cy:open": "cypress open",
+    "cypress": "start-server-and-test start:silent http://localhost:3001/ cy:open"
   },
   "eslintConfig": {
     "extends": [
