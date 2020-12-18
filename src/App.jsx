@@ -1,8 +1,9 @@
 import React from "react";
 import './App.css';
-//import "./index.css";
-import { Button, Divider, Grid, Segment, Header, Icon } from "semantic-ui-react";
+import "./index.css";
+import { Button, Divider, Grid, Segment } from "semantic-ui-react";
 import "semantic-ui-css/semantic.min.css";
+import Header from './Components/Header'
 
 
 class App extends React.Component {
@@ -10,14 +11,8 @@ class App extends React.Component {
   render() {
    
     return ( 
-      <div>
-        <Header as='h2' icon>
-    <Icon name='game' />
-    Rock, Paper, Scissors!
-    <Header.Subheader>
-      Let's Play!
-    </Header.Subheader>
-  </Header>
+      <>
+        <Header />
       
     <Segment>
     
@@ -88,7 +83,7 @@ class App extends React.Component {
      <Divider vertical>VS</Divider>
 
     </Segment>
-    </div>
+    </>
       );
 
   }
