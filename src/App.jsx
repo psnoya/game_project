@@ -1,6 +1,4 @@
 import React from "react";
-import './App.css';
-import "./index.css";
 import { Button, Divider, Grid, Segment } from "semantic-ui-react";
 import "semantic-ui-css/semantic.min.css";
 import Header from './Components/Header'
@@ -21,27 +19,27 @@ class App extends React.Component {
           
           >
 <Grid.Column 
- width={5}
- floated='left'
+ width={2}
+ floated='centered'
 >
         <Button 
         icon='file outline'
         color='green'
-        floated='left'
+        // floated='left'
         size='massive'>
         </Button>
 
         <Button 
         icon='cube'
         color="yellow"
-        floated='middle'
+        // floated='middle'
         size='massive'>
         </Button>
 
         <Button 
         icon='cut'
         color="purple"
-        floated='right'
+        // floated='right'
         size='massive'>
         </Button>
 
@@ -50,28 +48,28 @@ class App extends React.Component {
        
         
       <Grid.Column
-      floated='right'
-      width={5}>
+      floated='centered'
+      width={2}>
        
         
         <Button 
         icon='file outline'
         color='green'
-        floated='left'
+        // floated='left'
         size='massive'>
         </Button>
 
         <Button 
         icon='cube'
         color="yellow"
-        floated='middle'
+        // floated='middle'
         size='massive'>
         </Button>
 
         <Button 
         icon='cut'
         color="purple"
-        floated='right'
+        // floated='right'
         size='massive'>
         </Button>
           

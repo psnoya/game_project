@@ -6,9 +6,15 @@ const Header = () => {
   return (
   
     <Segment 
-    inverted color='pink'>
+    id="header"
+    size="medium"
+    inverted color="teal"
+    vertical
+    textAlign="center"
+    style={{ fontFamily: "monospace" }}>
       <Icon name='play circle'
       size='big'
+      
        />
       
       Rock, Paper and Scissors! 
