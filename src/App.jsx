@@ -1,93 +1,34 @@
 import React from "react";
-import { Button, Divider, Grid, Segment } from "semantic-ui-react";
+import { Divider, Grid, Segment } from "semantic-ui-react";
 import "semantic-ui-css/semantic.min.css";
-import Header from './Components/Header'
-import Footer from './Components/Footer'
-import './App.css';
-
-
+import Header from "./Components/Header.jsx";
+import Footer from "./Components/Footer.jsx";
+import P1 from "./Components/P1.jsx";
+import "./index.css";
+import P2 from "./Components/P2.jsx";
 
 class App extends React.Component {
-  
   render() {
-   
-    return ( 
+    return (
       <>
         <Header />
-      
-    <Segment>
-    
 
-    <Grid columns={2} 
-          
-          >
-<Grid.Column 
- width={2}
- floated='centered'
->
-        <Button 
-        icon='file outline'
-        color='green'
-        // floated='left'
-        size='massive'>
-        </Button>
+        <Segment>
+          <Grid columns={2}>
+            <Grid.Column width={2} floated="centered">
+              <P1 />
+            </Grid.Column>
 
-        <Button 
-        icon='cube'
-        color="yellow"
-        // floated='middle'
-        size='massive'>
-        </Button>
+            <Grid.Column floated="centered" width={2}>
+              <P2 />
+            </Grid.Column>
+          </Grid>
 
-        <Button 
-        icon='cut'
-        color="purple"
-        // floated='right'
-        size='massive'>
-        </Button>
-
-        </Grid.Column>
-
-       
-        
-      <Grid.Column
-      floated='centered'
-      width={2}>
-       
-        
-        <Button 
-        icon='file outline'
-        color='green'
-        // floated='left'
-        size='massive'>
-        </Button>
-
-        <Button 
-        icon='cube'
-        color="yellow"
-        // floated='middle'
-        size='massive'>
-        </Button>
-
-        <Button 
-        icon='cut'
-        color="purple"
-        // floated='right'
-        size='massive'>
-        </Button>
-          
-      
-      </Grid.Column>
-
-    </Grid>
-    
-     <Divider vertical>VS</Divider>
-
-    </Segment>
-    <Footer />
-    </>
-      );
-
+          <Divider vertical>VS</Divider>
+        </Segment>
+        <Footer />
+      </>
+    );
   }
 }
 

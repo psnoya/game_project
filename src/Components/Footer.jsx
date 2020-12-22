@@ -1,16 +1,14 @@
 import React from 'react'
 
 const Footer = () => (
- 
-  <div 
-  id="footer"
+
+  <footer>
+   
   
+    <p  id="footer">RPS Game v7.9</p>
   
-  >
-    <p>Game </p>
-  </div>
-      
+</footer>
 )
-  
+
 
 export default Footer

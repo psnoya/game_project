@@ -7,8 +7,8 @@ const Header = () => {
   
     <Segment 
     id="header"
-    size="big"
-    inverted color="pink"
+    size="medium"
+    inverted color= 'teal'
     vertical
     textAlign="center"
     style={{ fontFamily: "ui-rounded",fontSize: 20}}>
