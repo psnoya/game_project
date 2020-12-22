@@ -7,15 +7,16 @@ const Header = () => {
   
     <Segment 
     id="header"
-    size="medium"
-    inverted color="teal"
+    size="big"
+    inverted color="pink"
     vertical
     textAlign="center"
-    style={{ fontFamily: "monospace" }}>
+    style={{ fontFamily: "ui-rounded",fontSize: 20}}>
       <Icon name='play circle'
       size='big'
       
        />
+       
       
       Rock, Paper and Scissors! 
       Let's Play!

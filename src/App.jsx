@@ -2,6 +2,9 @@ import React from "react";
 import { Button, Divider, Grid, Segment } from "semantic-ui-react";
 import "semantic-ui-css/semantic.min.css";
 import Header from './Components/Header'
+import Footer from './Components/Footer'
+import './App.css';
+
 
 
 class App extends React.Component {
@@ -81,6 +84,7 @@ class App extends React.Component {
      <Divider vertical>VS</Divider>
 
     </Segment>
+    <Footer />
     </>
       );
 
