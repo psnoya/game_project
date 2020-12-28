@@ -1,12 +1,12 @@
 import React from "react";
-import { Button, Grid, Header, Divider, Segment } from "semantic-ui-react";
+import { Button, Grid, Segment } from "semantic-ui-react";
 
 const Game = () => {
   
   return (
     <>
       <Segment>
-        <Grid columns={2} relaxed="very">
+        <Grid columns={1} relaxed="very">
           <Grid.Column
             width={2}
             floated="centered"
@@ -36,28 +36,9 @@ const Game = () => {
             ></Button>
           </Grid.Column>
 
-          <Grid.Column width={2} floated="centered">
-            <Button
-              icon="file outline"
-              color="green"
-              size="massive"
-            ></Button>
-
-            <Button
-              icon="cube"
-              color="yellow"
-              size="massive"
-            ></Button>
-
-            <Button
-              icon="cut"
-              color="purple"
-              size="massive"
-            ></Button>
-          </Grid.Column>
+         
         </Grid>
 
-        <Divider vertical>VS</Divider>
       </Segment>
     </>
   );

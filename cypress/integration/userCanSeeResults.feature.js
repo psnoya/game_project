@@ -6,8 +6,4 @@ describe("User can see the results", () => {
       },
     });
   });
-
-
-
-
 });
