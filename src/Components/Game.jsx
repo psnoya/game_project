@@ -2,6 +2,7 @@ import React from "react";
 import { Button, Grid, Header, Divider, Segment } from "semantic-ui-react";
 
 const Game = () => {
+  
   return (
     <>
       <Segment>
@@ -12,6 +13,7 @@ const Game = () => {
           >
             <Button
               data-cy="paper-button"
+              name="paper"
               icon="file outline"
               color="green"
               size="massive"
@@ -19,6 +21,7 @@ const Game = () => {
 
             <Button
               data-cy="rock-button"
+              name="rock"
               icon="cube"
               color="yellow"
               size="massive"
@@ -26,6 +29,7 @@ const Game = () => {
 
             <Button
               data-cy="scissors-button"
+              name="scissors"
               icon="cut"
               color="purple"
               size="massive"
@@ -34,21 +38,18 @@ const Game = () => {
 
           <Grid.Column width={2} floated="centered">
             <Button
-              data-cy="paper-button"
               icon="file outline"
               color="green"
               size="massive"
             ></Button>
 
             <Button
-              data-cy="rock-button"
               icon="cube"
               color="yellow"
               size="massive"
             ></Button>
 
             <Button
-              data-cy="scissors-button"
               icon="cut"
               color="purple"
               size="massive"
