@@ -22,7 +22,7 @@ const Rules = () => {
       <List.Item>
         <List.Content>
           <List.Header>Rule .3</List.Header>
-          Scissors beats paper
+          Scissors beats Paper
         </List.Content>
       </List.Item>
     </List>
