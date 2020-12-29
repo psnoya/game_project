@@ -1,46 +1,82 @@
-import React from "react";
-import { Button, Grid, Segment } from "semantic-ui-react";
+import React, { Component } from "react";
+import { Button, Grid, Segment, Message } from "semantic-ui-react";
 
-const Game = () => {
-  
-  return (
-    <>
+const choices = ["paper", "rock", "scissors"];
+
+class Game extends Component {
+  state = {
+    userChoice: "",
+    computerChoice: "",
+    results: "",
+  };
+  onCLick(e) {
+    const userChoice = e.target.id;
+    const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+    const results = this.getResults(userChoice, computerChoice);
+    this.setState({
+      userChoice: userChoice,
+      computerChoice: computerChoice,
+      results: results,
+    });
+  }
+  getResults(userChoice, computerChoice) {
+    if (userChoice === computerChoice) {
+      return "DRAW!";
+    }
+    if (
+      (userChoice === "paper" && computerChoice === "rock") ||
+      (userChoice === "rock" && computerChoice === "scissors") ||
+      (userChoice === "scissors" && computerChoice === "paper")
+    ) {
+      return "CONGRATULATIONS! You won!";
+    } else {
+      return "You have Lost! What a shame! ";
+    }
+  }
+  render() {
+    
+    return (
+
       <Segment>
         <Grid columns={1} relaxed="very">
-          <Grid.Column
-            width={2}
-            floated="centered"
-          >
+          <Grid.Column width={2} floated="centered">
             <Button
               data-cy="paper-button"
-              name="paper"
+              // id="paper"
+              onCLick={(e) => this.onCLick(e)}
               icon="file outline"
               color="green"
               size="massive"
-            ></Button>
-
+            />
+            Paper
             <Button
               data-cy="rock-button"
-              name="rock"
+              // id="rock"
+              onCLick={(e) => this.onCLick(e)}
               icon="cube"
               color="yellow"
               size="massive"
-            ></Button>
-
+            />
+            Rock
             <Button
               data-cy="scissors-button"
-              name="scissors"
+              // id="scissors"
+              onCLick={(e) => this.onCLick(e)}
               icon="cut"
               color="purple"
               size="massive"
-            ></Button>
+            />
+            Scissors
           </Grid.Column>
-
-         
         </Grid>
-
+        <Message data-cy='results'>
+        <Message.Header 
+        >
+          {this.results.results}
+        </Message.Header>
+        </Message>
       </Segment>
-    </>
-  );
-};
+    );
+  }
+}
 export default Game;

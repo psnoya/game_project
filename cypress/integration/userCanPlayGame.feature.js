@@ -9,7 +9,7 @@ describe("Computer selects scissors", () => {
 
       it('user selects paper = game is Lost', () => {
         cy.get("[data-cy='paper-button']").click()
-        cy.get("[data.cy='result']").should("contain", "You have Lost! What a shame!")
+        cy.get("[data-cy='results']").should("contain", "You have Lost! What a shame!")
       })
       it('user selects scissors = game is Tied', () => {
         cy.get("[data-cy='scissors-button']").click()
