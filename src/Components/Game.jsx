@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Button, Grid, Segment, Message } from "semantic-ui-react";
+import { Button, Grid, Segment, Message} from "semantic-ui-react";
 
 const choices = ["paper", "rock", "scissors"];
 
@@ -24,13 +24,13 @@ class Game extends Component {
       return "DRAW!";
     }
     if (
-      (userChoice === "paper" && computerChoice === "rock") ||
-      (userChoice === "rock" && computerChoice === "scissors") ||
-      (userChoice === "scissors" && computerChoice === "paper")
+      (userChoice === "paper-button" && computerChoice === "rock-button") ||
+      (userChoice === "rock-button" && computerChoice === "scissors-button") ||
+      (userChoice === "scissors-button" && computerChoice === "paper-button")
     ) {
       return "CONGRATULATIONS! You won!";
     } else {
-      return "You have Lost! What a shame! ";
+      return "You have Lost! What a shame!";
     }
   }
   render() {
@@ -42,7 +42,6 @@ class Game extends Component {
           <Grid.Column width={2} floated="centered">
             <Button
               data-cy="paper-button"
-              // id="paper"
               onCLick={(e) => this.onCLick(e)}
               icon="file outline"
               color="green"
@@ -51,7 +50,6 @@ class Game extends Component {
             Paper
             <Button
               data-cy="rock-button"
-              // id="rock"
               onCLick={(e) => this.onCLick(e)}
               icon="cube"
               color="yellow"
@@ -60,7 +58,6 @@ class Game extends Component {
             Rock
             <Button
               data-cy="scissors-button"
-              // id="scissors"
               onCLick={(e) => this.onCLick(e)}
               icon="cut"
               color="purple"
@@ -68,14 +65,16 @@ class Game extends Component {
             />
             Scissors
           </Grid.Column>
+          
+    
         </Grid>
-        <Message data-cy='results'>
-        <Message.Header 
-        >
-          {this.results.results}
+        <Message data-cy="result">
+        <Message.Header >
+          {this.state.results}
         </Message.Header>
         </Message>
       </Segment>
+      
     );
   }
 }

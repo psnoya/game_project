@@ -28,16 +28,16 @@ describe("Computer selects scissors", () => {
           }
         })
         it('user selects paper = game is Tied', () => {
-          cy.get("[data-cy='paper-button']").click()
-          cy.get("[data-cy='results']").should("contain", "DRAW!")
+          cy.get("#paper-button").click()
+          cy.get("#results").should("contain", "DRAW!")
         })
         it('user selects scissors = game is Won', () => {
-          cy.get("[data-cy='scissors-button']").click()
-          cy.get("[data-cy='results']").should("contain", "CONGRATULATIONS! You won!")
+          cy.get("#scissors-button").click()
+          cy.get("#results").should("contain", "CONGRATULATIONS! You won!")
         })
         it('user selects rock = game is Lost', () => {
-          cy.get("[data-cy='rock-button']").click()
-          cy.get("[data-cy='results']").should("contain", "You have Lost! What a shame!")
+          cy.get("#rock-button").click()
+          cy.get("#results").should("contain", "You have Lost! What a shame!")
         })
       })
       describe("Computer selects rock", () => {
@@ -48,7 +48,7 @@ describe("Computer selects scissors", () => {
             }
           })
           it('user selects paper = game is Won', () => {
-            cy.get("[data-cy='paper-button']").click()
+            cy.get("#paper-button").click()
             cy.get("[data-cy='results']").should("contain", "CONGRATULATIONS! You won!")
          })
          it('user selects scissors = game is Lost', () => {
