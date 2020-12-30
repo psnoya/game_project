@@ -5,7 +5,7 @@ const Footer = () => (
   <footer>
    
   
-    <p  id="footer">RPS Game v.172.5</p>
+    <p  id="footer">RPS Game v.172.5PLS-HELP-ME</p>
   
 </footer>
 )

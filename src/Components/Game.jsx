@@ -24,13 +24,13 @@ class Game extends Component {
       return "DRAW!";
     }
     if (
-      (userChoice === "paper-button" && computerChoice === "rock-button") ||
-      (userChoice === "rock-button" && computerChoice === "scissors-button") ||
-      (userChoice === "scissors-button" && computerChoice === "paper-button")
+      (userChoice === "paper" && computerChoice === "rock") ||
+      (userChoice === "rock" && computerChoice === "scissors") ||
+      (userChoice === "scissors" && computerChoice === "paper")
     ) {
-      return "CONGRATULATIONS! You won!";
+      return "CONGRATULATIONS! You won!"
     } else {
-      return "You have Lost! What a shame!";
+      return "You have Lost! What a shame!"
     }
   }
   render() {
@@ -40,35 +40,36 @@ class Game extends Component {
       <Segment>
         <Grid columns={1} relaxed="very">
           <Grid.Column width={2} floated="centered">
+            <div class="ui vertical buttons">
             <Button
+            class="ui button"
               data-cy="paper-button"
               onCLick={(e) => this.onCLick(e)}
-              icon="file outline"
               color="green"
               size="massive"
-            />
-            Paper
+              
+            > Paper </Button>
             <Button
+            class="ui button"
               data-cy="rock-button"
               onCLick={(e) => this.onCLick(e)}
-              icon="cube"
               color="yellow"
               size="massive"
-            />
-            Rock
+            >Rock </Button>
+            
             <Button
+            class="ui button"
               data-cy="scissors-button"
               onCLick={(e) => this.onCLick(e)}
-              icon="cut"
               color="purple"
               size="massive"
-            />
-            Scissors
+            > Scissors </Button>
+            </div>
           </Grid.Column>
           
     
         </Grid>
-        <Message data-cy="result">
+        <Message data-cy="results">
         <Message.Header >
           {this.state.results}
         </Message.Header>
