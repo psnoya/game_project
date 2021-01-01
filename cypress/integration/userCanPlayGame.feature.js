@@ -1,15 +1,15 @@
 describe("Computer selects scissors", () => {
       beforeEach(() => {
         cy.visit("/", {
-          onBeforeLoad: winner => {
-            cy.stub(winner.Math, 'floor').returns(0)
+          onBeforeLoad: window => {
+            cy.stub(window.Math, 'floor').returns(2)
           }
         })
       })
 
       it('user selects paper = game is Lost', () => {
         cy.get("[data-cy='paper-button']").click()
-        cy.get("[data.cy='result']").should("contain", "You have Lost! What a shame!")
+        cy.get("[data-cy='results']").should("contain", "You have Lost! What a shame!")
       })
       it('user selects scissors = game is Tied', () => {
         cy.get("[data-cy='scissors-button']").click()
@@ -23,8 +23,8 @@ describe("Computer selects scissors", () => {
     describe("Computer selects paper", () => {
       beforeEach(() => {
         cy.visit("/", {
-          onBeforeLoad: winner => {
-            cy.stub(winner.Math, 'floor').returns(1)
+          onBeforeLoad: window=> {
+            cy.stub(window.Math, 'floor').returns(0)
           }
         })
         it('user selects paper = game is Tied', () => {
@@ -43,8 +43,8 @@ describe("Computer selects scissors", () => {
       describe("Computer selects rock", () => {
         beforeEach(() => {
           cy.visit("/", {
-            onBeforeLoad: winner => {
-              cy.stub(winner.Math, 'floor').returns(2)
+            onBeforeLoad: window=> {
+              cy.stub(window.Math, 'floor').returns(1)
             }
           })
           it('user selects paper = game is Won', () => {

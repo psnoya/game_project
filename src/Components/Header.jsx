@@ -7,7 +7,7 @@ const Header = () => {
   
     <Segment 
     id="header"
-    size="medium"
+    size="massive"
     inverted color= 'teal'
     vertical
     textAlign="center"
